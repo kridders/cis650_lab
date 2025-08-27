@@ -1,7 +1,11 @@
 numbers = []
 
 for i in range(1,6):
-    numbers.append(int(input(f"Please enter the {i}. number: ")))
+    new_number = input(f"Please enter the {i}. number:  ")
+    while not new_number.isdigit():
+        print("You did not enter a valid number. Please try again! ")
+        new_number = input(f"Please enter the {i}. number:  ")
+    numbers.append(int(new_number))
 
 numbers.sort()
 
