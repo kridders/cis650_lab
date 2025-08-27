@@ -1,4 +1,13 @@
-miles_driven = float(input("Please enter the amount of miles driven: "))
-gallons_used = float(input("Please enter the amount of gallons used: "))
+miles_driven = input("Please enter the amount of miles driven: ")
 
-print("Miles per gallon:", miles_driven/gallons_used)
+while not miles_driven.isdigit():
+    print("You did not enter a valid number for the amount of miles driven!")
+    miles_driven = input("Please enter the amount of miles driven: ")
+
+gallons_used = input("Please enter the amount of gallons used: ")
+while not gallons_used.isdigit():
+    print("You did not enter a valid number for the amount of gallons used!")
+    gallons_used = input("Please enter the amount of gallons used: ")
+
+
+print("Miles per gallon:", round(float(miles_driven) / float(gallons_used), 2))
